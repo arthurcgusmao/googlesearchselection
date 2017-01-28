@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+text="$(xsel -o)"
+for term in $text; do
+    search="$search%20$term"
+done
+x-www-browser "http://www.google.com/search?q=$search"
